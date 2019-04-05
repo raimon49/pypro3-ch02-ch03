@@ -51,7 +51,9 @@ def index():
     """トップページ
     テンプレートを使用してページを表示します
     """
-    return render_template('index.html')
+    # 記録データを読み込みます
+    rides = load_data()
+    return render_template('index.html', rides=rides)
 
 
 if __name__ == '__main__':
