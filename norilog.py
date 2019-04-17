@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import json
+from datetime import datetime
 
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, request
 
 application = Flask(__name__)
 
@@ -54,6 +55,19 @@ def index():
     # 記録データを読み込みます
     rides = load_data()
     return render_template('index.html', rides=rides)
+
+
+@application.route('/save', methods=['POST'])
+def save():
+    """記録用 URL"""
+    # 記録されたデータを取得します
+    start = request.form.get('start') # 出発
+    finish = request.form.get('finish') # 到着
+    memo = request.form.get('memo') # メモ
+    created_at = datetime.now() # 記録日時（現在時間）データを保存します
+    save_data(start, finish, memo, created_at)
+    # 保存後はトップページにリダイレクトします
+    return redirect('/')
 
 
 if __name__ == '__main__':

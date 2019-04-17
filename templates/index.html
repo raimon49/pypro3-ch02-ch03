@@ -10,8 +10,29 @@
 </head>
 <body>
     <h1>乗りログ</h1>
-    <form action="/save" method="post">
-    ...  <!-- 省略 -->
+        <form action="/save" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="start">出発</label><br/>
+                    <input id="start" type="text" name="start"/>
+                </td>
+                <td>
+                    <label for="finish">到着</label><br/>
+                    <input id="finish" type="text" name="finish"/>
+                </td>
+                <td>
+                    <br/>
+                    <button>追加</button>
+                </td>
+            </tr>
+            <tr>
+               <td colspan="3">
+                   <label for="memo">メモ</label>
+                   <textarea id="memo" name="memo"></textarea>
+                </td>
+            </tr>
+        </table>
     </form>
     <h3>乗り一覧</h3>
     <table class="list">  <!-- list のclassを追加 -->
