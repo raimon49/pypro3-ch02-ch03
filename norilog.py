@@ -1,12 +1,29 @@
 # -*- coding: utf-8 -*-
 import json
 from datetime import datetime
+import argparse
 
 from flask import Flask, render_template, redirect, request, Markup, escape
 
 application = Flask(__name__)
 
 DATA_FILE = 'norilog.json'
+NETWORK = '127.0.0.1'
+PORT = 8000
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description='A norikae log web application.')
+    parser.add_argument('-v', '--version',
+                        action='version',
+                        version='norilog 1.0.0')
+    parser.add_argument('-n', '--network',
+                        default=NETWORK)
+    parser.add_argument('-p', '--port',
+                        type=int,
+                        default=PORT)
+
+    return parser.parse_args()
 
 
 def save_data(start, finish, memo, created_at):
@@ -77,4 +94,7 @@ def nl2br_filter(e):
 
 
 if __name__ == '__main__':
-    application.run('0,0.0.0', 8000, debug=True)
+    args = parse_args()
+    application.run(args.network,
+                    args.port,
+                    debug=True)
