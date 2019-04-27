@@ -52,5 +52,5 @@ Webブラウザーでコメントを投稿するWebアプリケーションの�
      (venv) $ pip install -e ./norilog
      (venv) $ pip freeze > requirements.txt
 
-3. setup.pyとrequirements.txtをリポジトリーにコミットする
+3. ``setup.py`` と ``requirements.txt`` をリポジトリーにコミットする
 
