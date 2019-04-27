@@ -107,4 +107,4 @@ venv.bak/
 .mypy_cache/
 
 # for this app
-norilog/*.json
+norilog.json

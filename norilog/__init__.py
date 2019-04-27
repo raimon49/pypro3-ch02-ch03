@@ -93,8 +93,12 @@ def nl2br_filter(e):
     return escape(e).replace('\n', Markup('<br>'))
 
 
-if __name__ == '__main__':
+def main():
     args = parse_args()
     application.run(args.network,
                     args.port,
                     debug=True)
+
+
+if __name__ == '__main__':
+    main()
