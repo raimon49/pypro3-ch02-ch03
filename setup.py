@@ -16,6 +16,7 @@ setup(
     version='1.0.0',
     description='The NoriLog web application.',
     long_description=read_file('README.rst'),
+    long_description_content_type='text/x-rst',
     author='raimon49',
     author_email='raimon49@hotmail.com',
     url='https://github.com/raimon49/pypro3-ch02-ch03',
