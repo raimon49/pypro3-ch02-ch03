@@ -45,4 +45,4 @@ clean:
 # help	help	 Show task list
 .PHONY: help
 help:
-	@sed -n 's/# help//p' < Makefile
+	@head -n -2 Makefile | sed -n 's/# help//p'
