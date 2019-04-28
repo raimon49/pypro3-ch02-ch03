@@ -2,6 +2,9 @@
 乗りログアプリ
 ==============
 
+TestPyPI Server:
+https://test.pypi.org/project/raimon49.norilog/
+
 目的
 =====
 
