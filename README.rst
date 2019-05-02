@@ -27,7 +27,7 @@ Webブラウザーでコメントを投稿するWebアプリケーションの�
    $ python3 -m venv venv
    $ source venv/bin/activate
    (venv) $ pip install .
-   (venv) $ norilog -n 127.0.0.1:8000
+   (venv) $ norilog -n 192.168.56.102 -p 8000
     * Running on http://127.0.0.1:8000/
 
 
