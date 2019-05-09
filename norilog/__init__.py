@@ -16,7 +16,7 @@ def parse_args():
         description='A norikae log web application.')
     parser.add_argument('-v', '--version',
                         action='version',
-                        version='norilog 1.0.0')
+                        version='norilog 1.1.0')
     parser.add_argument('-n', '--network',
                         default=NETWORK)
     parser.add_argument('-p', '--port',

@@ -13,7 +13,7 @@ def read_file(filename):
 
 setup(
     name='raimon49.norilog',
-    version='1.0.0',
+    version='1.1.0',
     description='The NoriLog web application.',
     long_description=read_file('README.rst'),
     long_description_content_type='text/x-rst',
